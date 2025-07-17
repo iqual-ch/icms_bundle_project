@@ -17,10 +17,10 @@ selection_criteria:
       node: node
     bundles:
       icms_project: icms_project
-    e2a1c5d7-8b9e-4f3a-9c2d-7e6f5a4b3c2d:
+  e2a1c5d7-8b9e-4f3a-9c2d-7e6f5a4b3c2d:
     id: language
     negate: false
-    uuid: e2a1c5d7-8b9e-4f3a-9c2d-7e6f5a4b3c2d:
+    uuid: e2a1c5d7-8b9e-4f3a-9c2d-7e6f5a4b3c2d
     context_mapping:
       language: 'node:langcode:language'
     langcodes:
