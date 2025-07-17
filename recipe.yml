@@ -1,0 +1,37 @@
+name: 'ICMS Project Recipe'
+description: 'A content type and layout for publishing projects.'
+type: 'Site'
+
+install:
+  # Core
+  - node
+  - user
+  - views
+  # Contrib
+  - blokkli_starterkit
+  - graphql_core_schema
+  - tagify_user_list
+  - conditional_fields
+
+config:
+  actions:
+  # Enable the paragraph type on all node types
+    field.field.node.*.field_icms_paragraphs:
+      simple_config_update:
+        settings.handler_settings.target_bundles.icms_layout_project: icms_layout_project
+        settings.handler_settings.target_bundles_drag_drop.icms_layout_project.enabled: true
+    paragraphs_blokkli.settings:
+      'simpleConfigArray:append':
+        property: enabled_types.node
+        values: [icms_project]
+  # Add the content type to the editorial workflow
+    workflows.workflow.editorial:
+      addNodeTypes: [icms_project]
+  # Add the content type to the default view mode
+  # GraphQL Core Schema
+    graphql.graphql_servers.graphql:
+      simple_config_update:
+        schema_configuration.core_composable.fields.paragraph.field_icms_topics: field_icms_topics
+        schema_configuration.core_composable.bundles.node.icms_project.enabled: true
+        schema_configuration.core_composable.fields.paragraph.field_icms_listing_type: field_icms_listing_type
+        schema_configuration.core_composable.bundles.paragraph.icms_layout_project.enabled: true
