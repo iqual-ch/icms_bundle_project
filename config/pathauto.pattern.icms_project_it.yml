@@ -4,29 +4,29 @@ dependencies:
   module:
     - language
     - node
-id: project_en
-label: 'Project (EN)'
+id: icms_project_it
+label: 'Project (IT)'
 type: 'canonical_entities:node'
-pattern: '/projects/[node:title]'
+pattern: '/progetti/[node:title]'
 selection_criteria:
-  c1e2f3a4-5b6c-7d8e-9f01-23456789abcd:
+  dd82e6e5-c06f-4c6f-8d3c-65011c40c66d:
     id: 'entity_bundle:node'
     negate: false
-    uuid: c1e2f3a4-5b6c-7d8e-9f01-23456789abcd
+    uuid: dd82e6e5-c06f-4c6f-8d3c-65011c40c66d
     context_mapping:
       node: node
     bundles:
       icms_project: icms_project
-  e2a1c5d7-8b9e-4f3a-9c2d-7e6f5a4b3c2d:
+  6547062f-39c0-4791-9545-c5e3f48ba06e:
     id: language
     negate: false
-    uuid: e2a1c5d7-8b9e-4f3a-9c2d-7e6f5a4b3c2d
+    uuid: 6547062f-39c0-4791-9545-c5e3f48ba06e
     context_mapping:
       language: 'node:langcode:language'
     langcodes:
-      en: en
+      it: it
 selection_logic: and
-weight: -10
+weight: 10
 relationships:
   'node:langcode:language':
     label: Language

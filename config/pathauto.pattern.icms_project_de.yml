@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: icms_project_de
+label: 'Project (DE)'
+type: 'canonical_entities:node'
+pattern: '/referenzen/[node:title]'
+selection_criteria:
+  a1b2c3d4-5678-90ab-cdef-1234567890ab:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: a1b2c3d4-5678-90ab-cdef-1234567890ab
+    context_mapping:
+      node: node
+    bundles:
+      icms_project: icms_project
+  b7e2f1a9-3c4d-4e5f-8a7b-2c1d9e8f7a6b:
+    id: language
+    negate: false
+    uuid: b7e2f1a9-3c4d-4e5f-8a7b-2c1d9e8f7a6b
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      de: de
+selection_logic: and
+weight: 8
+relationships:
+  'node:langcode:language':
+    label: Language
