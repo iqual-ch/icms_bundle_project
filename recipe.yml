@@ -12,6 +12,8 @@ install:
   - graphql_core_schema
   - tagify_user_list
   - conditional_fields
+  # Bundle Logic
+  - icms_bundle_project_logic
 
 config:
   actions:
